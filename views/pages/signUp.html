@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <% include ../partials/header %>
+    {{> header}}
 </head>
 <body>
+    <center>
+    <div style="width: 75%">
     <div id="homeDiv">
         <center>
             <br>
             <h1 class="title">Pay Them Dues</h1>
-            <h3 style="color: white; font-size:2rem">Explore your thoughts</h3>
             <br>
             <br>
-            <form action="/processLogin" data-ajax="false" method="POST" class="ui form" id="homeForm">
+            <form action="/signUp" data-ajax="false" method="POST" class="ui form">
                 <div class="field">
-                    <label class="formField">Email</label>
+                    <label class="formField">Username</label>
                     <input type="text" name="username" placeholder="Username">
                 </div>
                 <br>
@@ -21,20 +22,30 @@
                     <label class="formField">Password</label>
                     <input type="password" name="password" placeholder="Password">
                 </div>
+                <div class="field">
+                    <label class="formField">Committee Code</label>
+                    <input type="password" name="code" placeholder="Code">
+                </div>
                 
                 <br>
                 <button class="ui button" style="float: left; width: 48%; background-color: #7EC2AA; 
      color: #e5f2ff; font-size: 1.1rem" type="submit">Submit</button>
-                <button class="ui button" id="signUpButton"><a href="signup">Sign Up</a></button>
             </form>
             <br>
             <br>
             <br>
+            <button class="ui button"><a href="/dues">Check Out Dues</a></button>
+
+            <div class="ui tertiary inverted red segment" style="width: 25%; display: {{errMsg.display}}">
+                <p>{{errMsg.error}}</p>
+            </div>
         </center>
     </div>
     <br>
     <br>
     <br>
     <br>
+    </div>
+    </center>
 </body>
 </html>

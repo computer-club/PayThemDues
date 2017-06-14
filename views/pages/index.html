@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+</head>
+<body>
+    <center>
+    <div style="width: 75%">
+    <div id="homeDiv">
+        <center>
+            <br>
+            <h1 class="title">Pay Them Dues</h1>
+            <h3 style="color: white; font-size:2rem">Explore your thoughts</h3>
+            <br>
+            <br>
+            <form action="/processLogin" data-ajax="false" method="POST" class="ui form" id="homeForm">
+                <div class="field">
+                    <label class="formField">Username</label>
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <br>
+                <div class="field">
+                    <label class="formField">Password</label>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                
+                <br>
+                <button class="ui button" style="float: left; width: 48%; background-color: #7EC2AA; 
+     color: #e5f2ff; font-size: 1.1rem" type="submit">Submit</button>
+                <button class="ui button" style="float: right; width: 48%; background-color: #7EC2AA; 
+     color: #e5f2ff; font-size: 1.1rem" ><a href="signUp">Sign Up</a></button>
+            </form>
+            <br>
+            <br>
+            <br>
+            <button class="ui button"><a href="/dues">Check Out Dues</a></button>
+        </center>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    </center>
+</body>
+</html>
